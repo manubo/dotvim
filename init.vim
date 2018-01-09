@@ -1,5 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
-  Plug 'jacoborus/tender.vim'
+  Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -10,15 +10,21 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'mattn/emmet-vim'
   Plug 'junegunn/vim-slash'
-	Plug 'w0rp/ale'
+  Plug 'w0rp/ale'
   Plug 'ngmy/vim-rubocop'
   Plug 'janko-m/vim-test'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 call plug#end()
 
 set background=dark
 set termguicolors
 syntax enable
-colorscheme tender
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_invert_indent_guides = 1
+colorscheme gruvbox
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -26,11 +32,11 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = '|'
+let g:airline_theme='gruvbox'
 let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
-let g:airline_theme= 'tender'
 
 let g:deoplete#enable_at_startup = 1
 let g:ale_set_highlights = 1
@@ -41,6 +47,7 @@ let g:ale_fixers = {
 \  ],
 \}
 let g:ale_fix_on_save = 1
+let g:jsx_ext_required = 0
 
 let mapleader=","
 
@@ -52,6 +59,7 @@ set number         " Show the line numbers on the left side.
 set expandtab      " Insert spaces when TAB is pressed.
 set tabstop=2      " Render TABs using this many spaces.
 set shiftwidth=2   " Indentation amount for < and > commands.
+set list
 
 " --column: Show column number
 " --line-number: Show line number
