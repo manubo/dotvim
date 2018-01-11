@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -15,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'janko-m/vim-test'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 set background=dark
@@ -79,3 +81,7 @@ nnoremap <leader>t :Files<CR>
 nnoremap <leader>f :Find<CR>
 nnoremap <leader>e :Ex<CR>
 nmap <silent> t<leader>n :TestNearest<CR>
+nmap <silent> t<leader>f :TestFile<CR>
+nmap <silent> t<leader>s :TestSuite<CR>
+nmap <silent> t<leader>l :TestLast<CR>
+
