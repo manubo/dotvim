@@ -63,23 +63,20 @@ set tabstop=2      " Render TABs using this many spaces.
 set shiftwidth=2   " Indentation amount for < and > commands.
 set list
 
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
 
 nnoremap <silent> <F3> :nohlsearch<CR><C-l>
 nnoremap <leader>b :ls<CR>:buffer<Space>
 nnoremap <leader>t :Files<CR>
+nnoremap <leader>s :Ag! 
 nnoremap <leader>f :Find<CR>
 nnoremap <leader>e :Ex<CR>
+nnoremap <leader>f :bn<CR>
+nnoremap <leader>b :bp<CR>
 nmap <silent> t<leader>n :TestNearest<CR>
 nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
