@@ -28,6 +28,10 @@ let g:gruvbox_invert_selection = 0
 let g:gruvbox_invert_indent_guides = 1
 colorscheme gruvbox
 
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
@@ -35,10 +39,13 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = '|'
 let g:airline_theme='gruvbox'
-let g:airline_left_sep = ' '
-let g:airline_left_alt_sep = '|'
-let g:airline_right_sep = ' '
-let g:airline_right_alt_sep = '|'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 let g:deoplete#enable_at_startup = 1
 let g:ale_set_highlights = 1
