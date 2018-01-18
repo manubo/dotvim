@@ -48,7 +48,7 @@ let g:ale_fixers = {
 \    'eslint',
 \  ],
 \}
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:jsx_ext_required = 0
 
 let mapleader=","
@@ -77,6 +77,8 @@ nnoremap <leader>f :Find<CR>
 nnoremap <leader>e :Ex<CR>
 nnoremap <leader>f :bn<CR>
 nnoremap <leader>b :bp<CR>
+nnoremap <leader>ff :ALEFix<CR>
+nnoremap <F5> :buffers<CR>:buffer<Space>
 nmap <silent> t<leader>n :TestNearest<CR>
 nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
