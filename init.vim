@@ -16,9 +16,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'janko-m/vim-test'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
-  Plug 'scrooloose/nerdcommenter'
+  Plug 'tomtom/tcomment_vim'
   Plug 'vim-scripts/paredit.vim'
   Plug 'tpope/vim-surround'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 set background=dark
