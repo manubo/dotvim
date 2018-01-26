@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'vim-scripts/paredit.vim'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
 set background=dark
@@ -79,7 +81,7 @@ command! -bang -nargs=* Ag
 nnoremap <silent> <F3> :nohlsearch<CR><C-l>
 nnoremap <leader>b :ls<CR>:buffer<Space>
 nnoremap <leader>t :Files<CR>
-nnoremap <leader>s :Ag! 
+nnoremap <leader>g :Ag! 
 nnoremap <leader>f :Find<CR>
 nnoremap <leader>e :Ex<CR>
 nnoremap <leader>f :bn<CR>
