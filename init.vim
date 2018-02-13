@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-scripts/paredit.vim'
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'SirVer/ultisnips'
 call plug#end()
 
 set background=dark
@@ -60,6 +61,12 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 0
 let g:jsx_ext_required = 0
+
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 
 let mapleader=","
 

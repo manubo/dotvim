@@ -1,0 +1,65 @@
+snippet fun
+function ${1:name} {
+	$0
+}
+endsnippet
+
+
+snippet fa
+($1) => $0;
+endsnippet
+
+
+snippet fab
+($1) => {
+	$0
+};
+endsnippet
+
+
+snippet cl
+console.log($1);$0
+endsnippet
+
+
+snippet rtf
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const ${1:Name} = (${2:props}) => (
+	$0
+);
+
+$1.propTypes = {
+	$3
+};
+
+export default $1;
+endsnippet
+
+
+snippet rtc
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+export default class ${1:Name} extends Component {
+	static propTypes = {
+		$2
+	};
+
+	render() {
+		return (
+			$0
+		);
+	}
+}
+endsnippet
+
+
+snippet asc
+$1function ${2:name}($3) {
+	return (dispatch, getState) => {
+		$0
+	}
+}
+endsnippet
