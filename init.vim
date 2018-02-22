@@ -100,4 +100,4 @@ nmap <silent> t<leader>n :TestNearest<CR>
 nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
 nmap <silent> t<leader>l :TestLast<CR>
-
+nmap <silent> t<leader>v :TestVisit<CR>
