@@ -5,18 +5,17 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  " Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
   Plug 'fishbullet/deoplete-ruby'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
-  Plug 'mattn/emmet-vim'
   Plug 'junegunn/vim-slash'
   Plug 'w0rp/ale'
   Plug 'ngmy/vim-rubocop'
   Plug 'janko-m/vim-test'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'mattn/emmet-vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'vim-scripts/paredit.vim'
   Plug 'tpope/vim-surround'
@@ -32,6 +31,12 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection = 0
 let g:gruvbox_invert_indent_guides = 1
 colorscheme gruvbox
+
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
