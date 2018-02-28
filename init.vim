@@ -92,12 +92,13 @@ nnoremap <silent> <F3> :nohlsearch<CR><C-l>
 nnoremap <leader>b :ls<CR>:buffer<Space>
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>g :Ag! 
-nnoremap <leader>f :Find<CR>
 nnoremap <leader>e :Ex<CR>
-nnoremap <leader>f :bn<CR>
 nnoremap <leader>b :bp<CR>
-nnoremap <leader>ff :ALEFix<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>af :ALEFix<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
+" close buffer without closing split
+nnoremap <silent> <leader>w :lclose<bar>b#<bar>bd #<CR>
 nmap <silent> t<leader>n :TestNearest<CR>
 nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
