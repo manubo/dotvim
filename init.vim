@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'morhetz/gruvbox'
+  Plug 'iCyMind/NeoSolarized'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
@@ -15,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'janko-m/vim-test'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  Plug 'kchmck/vim-coffee-script'
   Plug 'mattn/emmet-vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'vim-scripts/paredit.vim'
@@ -23,14 +25,26 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'SirVer/ultisnips'
 call plug#end()
 
-set background=dark
 set termguicolors
 syntax enable
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_invert_indent_guides = 1
-colorscheme gruvbox
+
+" solarized
+set background=light
+let g:neosolarized_contrast = "normal"
+let g:neosolarized_visibility = "normal"
+let g:neosolarized_vertSplitBgTrans = 1
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 0
+colorscheme NeoSolarized
+
+" gruvbox
+" set background=dark
+" let g:gruvbox_italic = 1
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_invert_selection = 0
+" let g:gruvbox_invert_indent_guides = 1
+" colorscheme gruvbox
 
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
