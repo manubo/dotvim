@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'iCyMind/NeoSolarized'
+  Plug 'NLKNguyen/papercolor-theme'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
@@ -29,15 +30,15 @@ set termguicolors
 syntax enable
 
 " solarized
-set background=light
-let g:neosolarized_contrast = "normal"
-let g:neosolarized_visibility = "normal"
-let g:neosolarized_vertSplitBgTrans = 1
-let g:neosolarized_bold = 1
-let g:neosolarized_underline = 1
-let g:neosolarized_italic = 0
-colorscheme NeoSolarized
-
+" set background=light
+" let g:neosolarized_contrast = "normal"
+" let g:neosolarized_visibility = "normal"
+" let g:neosolarized_vertSplitBgTrans = 1
+" let g:neosolarized_bold = 1
+" let g:neosolarized_underline = 1
+" let g:neosolarized_italic = 0
+" colorscheme NeoSolarized
+"
 " gruvbox
 " set background=dark
 " let g:gruvbox_italic = 1
@@ -45,6 +46,9 @@ colorscheme NeoSolarized
 " let g:gruvbox_invert_selection = 0
 " let g:gruvbox_invert_indent_guides = 1
 " colorscheme gruvbox
+
+set background=light
+colorscheme PaperColor
 
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
@@ -62,7 +66,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = '|'
-let g:airline_theme='gruvbox'
+let g:airline_theme='papercolor'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
