@@ -29,6 +29,11 @@ call plug#end()
 set termguicolors
 syntax enable
 
+set background=light
+colorscheme PaperColor
+
+set hidden
+
 " solarized
 " set background=light
 " let g:neosolarized_contrast = "normal"
@@ -46,9 +51,6 @@ syntax enable
 " let g:gruvbox_invert_selection = 0
 " let g:gruvbox_invert_indent_guides = 1
 " colorscheme gruvbox
-
-set background=light
-colorscheme PaperColor
 
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
@@ -105,6 +107,7 @@ set tabstop=2      " Render TABs using this many spaces.
 set shiftwidth=2   " Indentation amount for < and > commands.
 set list
 
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
