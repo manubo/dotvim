@@ -24,15 +24,17 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'SirVer/ultisnips'
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 
 set termguicolors
 syntax enable
 
-set background=light
-colorscheme PaperColor
-
 set hidden
+
+" papercolor set background=light
+" colorscheme PaperColor
 
 " solarized
 " set background=light
@@ -43,14 +45,14 @@ set hidden
 " let g:neosolarized_underline = 1
 " let g:neosolarized_italic = 0
 " colorscheme NeoSolarized
-"
+
 " gruvbox
-" set background=dark
-" let g:gruvbox_italic = 1
-" let g:gruvbox_contrast_dark = 'hard'
-" let g:gruvbox_invert_selection = 0
-" let g:gruvbox_invert_indent_guides = 1
-" colorscheme gruvbox
+set background=dark
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_invert_indent_guides = 1
+colorscheme gruvbox
 
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
@@ -95,6 +97,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 
+let vim_markdown_preview_github=1
+
 let mapleader=","
 
 set showcmd        " Show (partial) command in status line.
@@ -117,7 +121,7 @@ command! -bang -nargs=* Ag
 nnoremap <silent> <F3> :nohlsearch<CR><C-l>
 nnoremap <leader>b :ls<CR>:buffer<Space>
 nnoremap <leader>t :Files<CR>
-nnoremap <leader>g :Ag! 
+nnoremap <leader>g :Ag!
 nnoremap <leader>e :Ex<CR>
 nnoremap <leader>b :bp<CR>
 nnoremap <leader>n :bn<CR>
@@ -130,3 +134,14 @@ nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
 nmap <silent> t<leader>l :TestLast<CR>
 nmap <silent> t<leader>v :TestVisit<CR>
+
+tnoremap <C-[> <C-\><C-n>
+"Switching between split panes
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
