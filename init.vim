@@ -135,7 +135,7 @@ nmap <silent> t<leader>s :TestSuite<CR>
 nmap <silent> t<leader>l :TestLast<CR>
 nmap <silent> t<leader>v :TestVisit<CR>
 
-tnoremap <C-[> <C-\><C-n>
+" tnoremap <C-[> <C-\><C-n>
 "Switching between split panes
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
