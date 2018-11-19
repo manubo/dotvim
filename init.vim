@@ -27,6 +27,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'elixir-editors/vim-elixir'
   Plug 'JamshedVesuna/vim-markdown-preview'
+  Plug 'kana/vim-textobj-user'
+  Plug 'rhysd/vim-textobj-ruby'
 call plug#end()
 
 set termguicolors
