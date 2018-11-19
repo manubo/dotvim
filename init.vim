@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-slash'
   Plug 'w0rp/ale'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'ngmy/vim-rubocop'
   Plug 'janko-m/vim-test'
   Plug 'pangloss/vim-javascript'
@@ -99,7 +100,7 @@ let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 
 let vim_markdown_preview_github=1
 
-let mapleader=","
+let mapleader=" "
 
 set showcmd        " Show (partial) command in status line.
 set showmatch      " Show matching brackets.
@@ -110,6 +111,7 @@ set expandtab      " Insert spaces when TAB is pressed.
 set tabstop=2      " Render TABs using this many spaces.
 set shiftwidth=2   " Indentation amount for < and > commands.
 set list
+set tags=.tags
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
 command! -bang -nargs=* Ag
@@ -127,6 +129,7 @@ nnoremap <leader>b :bp<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>af :ALEFix<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
 " close buffer without closing split
 nnoremap <silent> <leader>w :lclose<bar>b#<bar>bd #<CR>
 nmap <silent> t<leader>n :TestNearest<CR>
@@ -134,6 +137,7 @@ nmap <silent> t<leader>f :TestFile<CR>
 nmap <silent> t<leader>s :TestSuite<CR>
 nmap <silent> t<leader>l :TestLast<CR>
 nmap <silent> t<leader>v :TestVisit<CR>
+nmap <leader>j <C-P><C-\>w
 
 " tnoremap <C-[> <C-\><C-n>
 "Switching between split panes
