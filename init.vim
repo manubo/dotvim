@@ -31,6 +31,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'rhysd/vim-textobj-ruby'
 call plug#end()
 
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 set termguicolors
 syntax enable
 
