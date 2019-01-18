@@ -26,9 +26,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'SirVer/ultisnips'
   Plug 'elixir-editors/vim-elixir'
+  Plug 'reasonml-editor/vim-reason-plus'
   Plug 'JamshedVesuna/vim-markdown-preview'
   Plug 'kana/vim-textobj-user'
   Plug 'rhysd/vim-textobj-ruby'
+  Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -92,6 +94,7 @@ let g:ale_fixers = {
 \    'prettier',
 \    'eslint',
 \  ],
+\  'ruby': ['rubocop'],
 \}
 let g:ale_fix_on_save = 0
 let g:jsx_ext_required = 0
