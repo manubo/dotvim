@@ -21,9 +21,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'kchmck/vim-coffee-script'
   Plug 'mattn/emmet-vim'
   Plug 'tomtom/tcomment_vim'
-  Plug 'vim-scripts/paredit.vim'
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'vim-scripts/paredit.vim'
   Plug 'SirVer/ultisnips'
   Plug 'elixir-editors/vim-elixir'
   Plug 'reasonml-editor/vim-reason-plus'
@@ -89,14 +88,16 @@ let g:airline_symbols.linenr = ''
 let g:tern#command = ['/usr/local/bin/tern']
 let g:deoplete#enable_at_startup = 1
 let g:ale_set_highlights = 1
-let g:ale_fixers = {
-\  'javascript': [
-\    'prettier',
-\    'eslint',
-\  ],
+let g:ale_linters = {
+\  'javascript': ['eslint'],
 \  'ruby': ['rubocop'],
 \}
-let g:ale_fix_on_save = 0
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\  'ruby': ['rubocop'],
+\}
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
 let g:jsx_ext_required = 0
 
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -146,7 +147,8 @@ nmap <silent> t<leader>l :TestLast<CR>
 nmap <silent> t<leader>v :TestVisit<CR>
 nmap <leader>j <C-P><C-\>w
 
-" tnoremap <C-[> <C-\><C-n>
+tnoremap <C-[> <C-\><C-n>
+
 "Switching between split panes
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
