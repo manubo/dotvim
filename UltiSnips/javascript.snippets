@@ -26,13 +26,14 @@ snippet rcf
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ${1:Name} = (${2:props}) => (
-	$0
-);
-
 $1.propTypes = {
 	$3
 };
+
+function ${1:Name}(${2:props}) {
+	$0
+}
+
 
 export default $1;
 endsnippet

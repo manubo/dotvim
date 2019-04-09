@@ -22,7 +22,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-surround'
-  Plug 'vim-scripts/paredit.vim'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'SirVer/ultisnips'
   Plug 'elixir-editors/vim-elixir'
   Plug 'reasonml-editor/vim-reason-plus'
@@ -89,11 +89,11 @@ let g:tern#command = ['/usr/local/bin/tern']
 let g:deoplete#enable_at_startup = 1
 let g:ale_set_highlights = 1
 let g:ale_linters = {
-\  'javascript': ['eslint'],
+\  'javascript': ['prettier', 'eslint'],
 \  'ruby': ['rubocop'],
 \}
 let g:ale_fixers = {
-\  'javascript': ['eslint'],
+\  'javascript': ['prettier', 'eslint'],
 \  'ruby': ['rubocop'],
 \}
 let g:ale_lint_on_save = 1
